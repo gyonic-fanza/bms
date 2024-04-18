@@ -1,7 +1,7 @@
 ﻿{
 "name" : "obj:GYONIC DP差分難易度表",
-"symbol" : "★",
+"symbol" : "",
 "data_url" : "https://script.google.com/macros/s/AKfycbxo08Q9dirOENlUkgrBc2rxmmitxB03zLF5k9OK8rLox_5qVkgTab4t10MWSU7ngFeZ/exec",
-"level_order" : [1,2,3,4,5,6,7,8,9,12,"?","皿"]
+"level_order" : ["☆1","☆2","☆4","☆5","☆6","☆7","☆8","☆9","☆10","☆11","☆12","★1","★2","★4","★5","★6","★7","★8","★9","★10","★11","★12","★?","皿"]
 
 }
