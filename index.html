@@ -118,7 +118,7 @@ function makeBMSTable(info, mark, order) {
 	
     // 表のクリア
     obj.html("");
-    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>譜面</td><td colspan='2' align='center'>beatoraja IR</td><td align='center'>タイトル</td><td align='center'>本体</td><td align='center'>差分</td><td align='center'>コメント</td></tr>").appendTo(obj);
+    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>譜面</td><td colspan='2' align='center'>beatoraja IR</td><td align='center'>タイトル(本体)</td><td align='center'>アーティスト(差分)</td><td align='center'>コメント</td></tr>").appendTo(obj);
     var obj_sep = null;
     for (var i = 0; i < info.length; i++) {
         // 難度ごとの区切り
@@ -173,25 +173,23 @@ function makeBMSTable(info, mark, order) {
 　　　　// 譜面画像
 　　　　$("<td width='1%' align='center'><a href='http://www.ribbit.xyz/bms/score/view?p=1&md5=" + info[i].md5 + "' target='_blank'>♪</a></td>").appendTo(str);
 
-　　　　// Mocha Repository
+　　　　// LR2IR
+　　　　$("<td width='1%' align='center'><a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].sha256 + "' target='_blank'>LR2IR</a></td>").appendTo(str);
+
+	// Mocha Repository
 　　　　$("<td width='1%' align='center'><a href='https://mocha-repository.info/song.php?sha256=" + info[i].sha256 + "' target='_blank'>Mocha</a></td>").appendTo(str);
 
 　　　　// MinIR
 　　　　$("<td width='1%' align='center'><a href='https://www.gaftalk.com/minir/#/viewer/song/" + info[i].sha256 + "/0' target='_blank'>MinIR</a></td>").appendTo(str); <!-- /0 を /1 /2 に変更すると CN,HCN のIRページにリンクされます -->
 
         // タイトル
-        $("<td width='20%'>" + "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
-        // アーティスト
+//        $("<td width='20%'>" + "<a href='http://www.dream-pro.info/~lavalse/LR2IR/search.cgi?mode=ranking&bmsmd5=" + info[i].md5 + "' target='_blank'>" + info[i].title + "</a></td>").appendTo(str);
         var astr = "";
         if(info[i].url != "" && info[i].url != null) {
-        	if(info[i].artist != "" && info[i].artist != null) {
-        		astr = "<a href='" + info[i].url + "'>" + info[i].artist + "</a>";
-        	} else {
-        		astr = "<a href='" + info[i].url + "'>" + info[i].url + "</a>";
-        	}
+        		astr = "<a href='" + info[i].url + "'>" + info[i].title + "</a>";
         } else {
-        	if(info[i].artist != "" && info[i].artist != null) {
-        		astr = info[i].artist;
+        	if(info[i].title != "" && info[i].title != null) {
+        		astr = info[i].title;
         	}
         }
         if(info[i].url_pack != "" && info[i].url_pack != null) {
@@ -206,16 +204,13 @@ function makeBMSTable(info, mark, order) {
         	}
         }
         $("<td width='20%'>" + astr + "</td>").appendTo(str);
+        // アーティスト
         // 差分
         if(info[i].url_diff != "" && info[i].url_diff != null) {
-        	if(info[i].name_diff != "" && info[i].name_diff != null) {
-	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].name_diff + "</a></td>").appendTo(str);
-        	} else {
-	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].url_diff + "</a></td>").appendTo(str);
-        	}
+	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].artist + "</a></td>").appendTo(str);
         } else {
-        	if(info[i].name_diff != "" && info[i].name_diff != null) {
-	        $("<td width='15%'>" + info[i].name_diff + "</td>").appendTo(str);
+        	if(info[i].artist != "" && info[i].artist != null) {
+	        $("<td width='15%'>" + info[i].artist + "</td>").appendTo(str);
         	} else {
 	        $("<td width='15%'></td>").appendTo(str);
         	}
