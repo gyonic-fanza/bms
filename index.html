@@ -244,7 +244,7 @@ function makeBMSTable(info, mark, order) {
         // アーティスト
         // 差分
         if(info[i].url_diff != "" && info[i].url_diff != null) {
-	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].artist + "</a></td</tr>>").appendTo(str);
+	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].artist + "</a></td</tr>").appendTo(str);
         } else {
         	if(info[i].artist != "" && info[i].artist != null) {
 	        $("<td width='15%'>" + info[i].artist + "</td></tr>").appendTo(str);
