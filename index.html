@@ -48,7 +48,7 @@
 			fixedSeconds = "0" + seconds;
 		}
 		// 表示用のテキストを作成 例: 2024年2月8日
-		const viewDateText = year + "年" + month + "月" + date + "日" + fixedHours + ":" + fixedMinutes + ":"+ fixedSeconds;
+		const viewDateText = year + "年" + month + "月" + date + "日 " + Hours + ":" + fixedMinutes + ":"+ fixedSeconds;
 		// データ用の文字列を作成 例: 2024-02-08
 		const datetimeText = year + "-" + fixedMonth + "-" + fixedDate + " " + fixedHours + ":" + fixedMinutes + ":"+ fixedSeconds;
 		// 更新日の表示先のHTML要素「time」タグを取得
