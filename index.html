@@ -227,7 +227,9 @@ function makeBMSTable(info, mark, order) {
         }
         if(info[i].state == 6) {
 	$("</tr><tr class='state6'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        }
+        } else {
+	$("</tr><tr class='state6'><td colspan='2' width='25%'></td>").appendTo(str);
+	}
 	str.appendTo(obj);
         count++;
     }
