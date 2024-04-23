@@ -254,24 +254,24 @@ function makeBMSTable(info, mark, order) {
         }
         // コメント
         if(info[i].state == 1) {
-	$("<tr class='state1'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state1'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 2) {
-	$("<tr class='state2'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state2'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 3) {
-	$("<tr class='state3'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state3'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 4) {
-	$("<tr class='state4'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state4'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 5) {
-	$("<tr class='state5'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state5'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 6) {
-	$("<tr class='state6'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state6'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         } else {
-	$("<tr class='normal'><td colspan='2' width='25%'></td>").appendTo(str);
+	$("</tr><tr class='normal'><td colspan='2' width='25%'></td>").appendTo(str);
 	}
 	str.appendTo(obj);
         count++;
