@@ -118,7 +118,7 @@ function makeBMSTable(info, mark, order) {
 	
     // 表のクリア
     obj.html("");
-    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>動画</td><td align='center'>譜面</td><td align='center'>IR</td><td align='center'>タイトル(本体)</td><td align='center'>アーティスト(差分)</td></tr>").appendTo(obj);
+    $("<tr height='20' style='color:white;background-color:#666666'><td align='center'>LV</td><td align='center'>動画</td><td align='center'>譜面</td><td align='center'>IR</td><td align='center'>タイトル(本体)</td><td align='center'>アーティスト(差分)</td><td align='center'>補足</td></tr>").appendTo(obj);
     var obj_sep = null;
     for (var i = 0; i < info.length; i++) {
         // 難度ごとの区切り
@@ -156,7 +156,7 @@ function makeBMSTable(info, mark, order) {
         }
 
         // レベル表記
-        $("<td width='6%'>" + mark + x + "</td>").appendTo(str);
+        $("<td width='1%'>" + mark + x + "</td>").appendTo(str);
         // 動画
 		if(info[i].video1 != "" && info[i].video1 != null){
 			// ニコニコ
