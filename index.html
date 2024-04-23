@@ -244,34 +244,34 @@ function makeBMSTable(info, mark, order) {
         // アーティスト
         // 差分
         if(info[i].url_diff != "" && info[i].url_diff != null) {
-	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].artist + "</a></td</tr>").appendTo(str);
+	        $("<td width='15%'><a href='" + info[i].url_diff + "'>" + info[i].artist + "</a></td>").appendTo(str);
         } else {
         	if(info[i].artist != "" && info[i].artist != null) {
-	        $("<td width='15%'>" + info[i].artist + "</td></tr>").appendTo(str);
+	        $("<td width='15%'>" + info[i].artist + "</td>").appendTo(str);
         	} else {
-	        $("<td width='15%'></td></tr>").appendTo(str);
+	        $("<td width='15%'></td>").appendTo(str);
         	}
         }
         // コメント
         if(info[i].state == 1) {
-	$("</tr><tr class='state1'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state1'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 2) {
-	$("</tr><tr class='state2'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state2'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 3) {
-	$("</tr><tr class='state3'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state3'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 4) {
-	$("</tr><tr class='state4'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state4'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 5) {
-	$("</tr><tr class='state5'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state5'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         }
         if(info[i].state == 6) {
-	$("</tr><tr class='state6'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='state6'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
         } else {
-	$("</tr><tr class='normal'><td colspan='2' width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
+	$("</tr><tr class='normal'><td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
 	}
 	str.appendTo(obj);
         count++;
