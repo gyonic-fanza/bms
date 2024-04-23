@@ -253,26 +253,7 @@ function makeBMSTable(info, mark, order) {
         	}
         }
         // コメント
-        if(info[i].state == 1) {
 	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        }
-        if(info[i].state == 2) {
-	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        }
-        if(info[i].state == 3) {
-	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        }
-        if(info[i].state == 4) {
-	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        }
-        if(info[i].state == 5) {
-	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        }
-        if(info[i].state == 6) {
-	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-        } else {
-	$("<td width='25%'>" + info[i].comment + "</div></td>").appendTo(str);
-	}
 	str.appendTo(obj);
         count++;
     }
